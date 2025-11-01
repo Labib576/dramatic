@@ -17,13 +17,13 @@ export default function ImageCarousel() {
   const images = [img1, img2, img3, img4, img5];
 
   return (
-    <div className="w-full py-6">
+    <div className="w-full h-2/3 py-6">
       <Swiper
         spaceBetween={20}
         pagination={{ clickable: true }}
         modules={[Pagination, Autoplay]}
         autoplay={{
-          delay: 2500, // প্রতি 2.5 সেকেন্ড পর slide বদলাবে
+          delay: 2500, 
           disableOnInteraction: false, // ইউজার ইন্টারঅ্যাকশনেও autoplay বন্ধ হবে না
         }}
         className="mySwiper"
@@ -34,7 +34,7 @@ export default function ImageCarousel() {
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full md:h-full  lg:h-full object-cover  transition-transform duration-300 "
+              className="w-full   md:h-2/3  lg:h-2/3 object-cover  transition-transform duration-300 "
             />
           </SwiperSlide>
         ))}
